@@ -90,7 +90,7 @@
     let total = 0;
     const linhas = itens.map((i) => {
       const unit = comDesconto(i.p.precoCentavos, dados.descontoPercentual);
-      const sub = unit * i.qtd; total += sub;
+      const sub = unit * i.qtd; total += unit;
       return "<tr data-item=\"" + i.p.id + "\"><td>" + i.p.nome + '</td><td class="num">' + i.qtd + '</td><td class="num">' + formatar(unit) + '</td><td class="num">' + formatar(sub) + "</td></tr>";
     }).join("");
     raiz.innerHTML =
