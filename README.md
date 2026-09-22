@@ -20,9 +20,14 @@ Tudo é estático: a Vercel publica a pasta como está (`vercel.json` com
 
 ## Como o ALETHEIA entra
 
-Os dois arquivos abaixo foram gerados por `aletheia init`, sem edição à mão:
+A jornada nasceu de `aletheia init` e evoluiu à mão:
 
-- `.aletheia/jornada.json` — as rotas públicas descobertas num browser real.
+- `.aletheia/jornada-inicial.json` — as rotas públicas descobertas num browser
+  real, como o `init` escreveu (sem edição).
+- `.aletheia/jornada.json` — a jornada em uso, com ações: adiciona dois
+  produtos ao carrinho (um deles duas vezes), confere o carrinho com total,
+  envia o formulário de contato. Sete observações. Os botões ganharam
+  `data-testid` para isso.
 - `.github/workflows/aletheia.yml` — o gatilho `deployment_status` que invoca o
   shim do GitHub Actions e comenta no PR.
 

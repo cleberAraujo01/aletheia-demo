@@ -1,0 +1,83 @@
+{
+  "irVersion": "1.0.0",
+  "id": "jr_aletheia_demo",
+  "name": "aletheia-demo",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "steps": [
+    {
+      "id": "st_01",
+      "action": "navigate",
+      "path": "/"
+    },
+    {
+      "id": "st_02",
+      "action": "observe",
+      "observationId": "home",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_03",
+      "action": "navigate",
+      "path": "/carrinho"
+    },
+    {
+      "id": "st_04",
+      "action": "observe",
+      "observationId": "carrinho",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_05",
+      "action": "navigate",
+      "path": "/catalogo"
+    },
+    {
+      "id": "st_06",
+      "action": "observe",
+      "observationId": "catalogo",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_07",
+      "action": "navigate",
+      "path": "/contato"
+    },
+    {
+      "id": "st_08",
+      "action": "observe",
+      "observationId": "contato",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_09",
+      "action": "navigate",
+      "path": "/produto"
+    },
+    {
+      "id": "st_10",
+      "action": "observe",
+      "observationId": "produto",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_11",
+      "action": "navigate",
+      "path": "/sobre"
+    },
+    {
+      "id": "st_12",
+      "action": "observe",
+      "observationId": "sobre",
+      "masks": [],
+      "database": []
+    }
+  ]
+}

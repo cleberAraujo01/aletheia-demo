@@ -48,7 +48,7 @@
         '<div class="categoria">' + p.categoria + "</div>" +
         '<div class="preco"><span class="preco-antigo">' + formatar(p.precoCentavos) + "</span>" + formatar(preco) + "</div>" +
         (p.estoque > 0
-          ? '<button class="botao" data-adicionar="' + p.id + '">Adicionar ao carrinho</button>'
+          ? '<button class="botao" data-testid="adicionar-' + p.id + '" data-adicionar="' + p.id + '">Adicionar ao carrinho</button>'
           : '<span class="esgotado">Esgotado</span>');
       raiz.appendChild(cartao);
     }
@@ -75,7 +75,7 @@
       '<p class="preco">De <span class="preco-antigo">' + formatar(p.precoCentavos) + "</span> por " + formatar(preco) +
       " <small>(" + dados.descontoPercentual + "% de desconto)</small></p>" +
       "<p>Estoque: <span data-estoque>" + p.estoque + "</span> unidade(s)</p>" +
-      (p.estoque > 0 ? '<button class="botao" data-adicionar="' + p.id + '">Adicionar ao carrinho</button>' : '<span class="esgotado">Esgotado</span>');
+      (p.estoque > 0 ? '<button class="botao" data-testid="adicionar-' + p.id + '" data-adicionar="' + p.id + '">Adicionar ao carrinho</button>' : '<span class="esgotado">Esgotado</span>');
     const botao = raiz.querySelector("[data-adicionar]");
     if (botao) botao.addEventListener("click", () => {
       const c = lerCarrinho(); c[p.id] = (c[p.id] || 0) + 1; gravarCarrinho(c); botao.textContent = "Adicionado";
