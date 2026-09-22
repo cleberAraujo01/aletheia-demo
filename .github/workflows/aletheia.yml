@@ -16,7 +16,7 @@ jobs:
       - uses: cleberAraujo01/ALETHEIA/shims/github-action@piloto-3
         with:
           aletheia-ref: piloto-3
-          base-url: https://PRODUCAO-DA-LOJA.vercel.app  # substitua pela URL de produção que a Vercel der ao projeto
+          base-url: https://aletheia-demo-tau.vercel.app
           head-url: ${{ github.event.deployment_status.environment_url }}
           journey: .aletheia/jornada.json
           secret-header: x-vercel-protection-bypass=VERCEL_AUTOMATION_BYPASS_SECRET
