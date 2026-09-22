@@ -36,3 +36,19 @@ GitHub).
 ```bash
 npx serve . --no-clipboard      # ou qualquer servidor estático
 ```
+
+## Registro de validação (2026-09-22)
+
+Produção: https://aletheia-demo-tau.vercel.app. Vercel Authentication
+desligada no projeto (loja pública; sem segredo no workflow).
+
+| PR | Natureza | Veredito | Tempo PR → comentário |
+|---|---|---|---|
+| #1 | legítima: frase a mais em `/sobre` | 🟢 `UNDETERMINED_ONLY`, 3 deltas, 0 bloqueante | 58 s |
+| #2 | D1: desconto 15% → 10% no JSON | 🔴 bloqueia — `descontoPercentual` na rede | 56 s |
+| #3 | D2: produto removido do JSON | 🔴 bloqueia — item removido + 2 `href` trocados | 63 s |
+| #4 | D3: link do rodapé → `/sobre-nos` | 🔴 bloqueia — `href` em 6 páginas, 1 grupo | 75 s |
+| #5 | D4: checagem de estoque invertida | 🔴 bloqueia — 6 botões "Adicionar" removidos | 62 s |
+
+Os PRs de defeito ficam abertos como registro; não devem ser mesclados.
+Leitura completa em `docs/medicao-fase-1.md` §11 do ALETHEIA.
