@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja Demo ALETHEIA</title>
+  <link rel="stylesheet" href="/assets/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="linha">
+      <a class="marca" href="/">Loja Demo ALETHEIA</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/catalogo">Catálogo</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="carrinho-link" href="/carrinho">Carrinho (<span data-carrinho-contador>0</span>)</a>
+    </div>
+  </header>
+  <main>
+    <section class="destaque">
+      <h1>Ambiente de validação do ALETHEIA</h1>
+      <p>Uma loja pequena e de verdade o bastante para ter regras de negócio quebráveis: preço, desconto, estoque e total. Cada PR neste repositório publica um preview, e o ALETHEIA compara o preview com a produção e comenta o resultado no próprio PR.</p>
+      <p><a class="botao" href="/catalogo">Ver catálogo</a></p>
+    </section>
+    <section>
+      <h2>Como este ambiente é usado</h2>
+      <ol>
+        <li>A jornada em <code>.aletheia/jornada.json</code> foi gerada por <code>aletheia init</code>, sem edição.</li>
+        <li>PRs legítimos (texto, estilo) devem passar sem bloqueio.</li>
+        <li>PRs com defeito injetado (desconto errado, produto sumido, link quebrado) devem ser bloqueados.</li>
+      </ol>
+    </section>
+  </main>
+  <footer class="rodape">
+    <div class="linha">
+      <span>Loja Demo ALETHEIA</span>
+      <a href="/sobre">Sobre</a>
+      <a href="/contato">Contato</a>
+      <a href="mailto:contato@exemplo.invalido">contato@exemplo.invalido</a>
+    </div>
+  </footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

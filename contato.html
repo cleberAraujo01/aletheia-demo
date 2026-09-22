@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — Loja Demo ALETHEIA</title>
+  <link rel="stylesheet" href="/assets/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="linha">
+      <a class="marca" href="/">Loja Demo ALETHEIA</a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/catalogo">Catálogo</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="carrinho-link" href="/carrinho">Carrinho (<span data-carrinho-contador>0</span>)</a>
+    </div>
+  </header>
+  <main>
+    <h1>Contato</h1>
+    <form class="formulario" data-pagina="contato" novalidate>
+      <label>Nome <input name="nome" type="text" placeholder="Seu nome" autocomplete="name"></label>
+      <label>E-mail <input name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email"></label>
+      <label>Assunto
+        <select name="assunto">
+          <option value="pedido">Pedido</option>
+          <option value="troca">Troca</option>
+          <option value="outro">Outro</option>
+        </select>
+      </label>
+      <label>Mensagem <textarea name="mensagem" rows="4"></textarea></label>
+      <button class="botao" type="submit">Enviar</button>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </form>
+    <p>Também por telefone: <a href="tel:+550000000000">(00) 0000-0000</a>.</p>
+  </main>
+  <footer class="rodape">
+    <div class="linha">
+      <span>Loja Demo ALETHEIA</span>
+      <a href="/sobre">Sobre</a>
+      <a href="/contato">Contato</a>
+    </div>
+  </footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
