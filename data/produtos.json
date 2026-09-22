@@ -2,11 +2,40 @@
   "moeda": "BRL",
   "descontoPercentual": 15,
   "produtos": [
-    { "id": "camisa-titular", "nome": "Camisa titular 2026", "categoria": "vestuario", "precoCentavos": 18990, "estoque": 24 },
-    { "id": "camisa-reserva", "nome": "Camisa reserva 2026", "categoria": "vestuario", "precoCentavos": 17990, "estoque": 12 },
-    { "id": "bone-classico", "nome": "Boné clássico", "categoria": "acessorios", "precoCentavos": 6990, "estoque": 40 },
-    { "id": "caneca-escudo", "nome": "Caneca com escudo", "categoria": "casa", "precoCentavos": 3990, "estoque": 0 },
-    { "id": "bola-oficial", "nome": "Bola oficial", "categoria": "esporte", "precoCentavos": 12990, "estoque": 7 },
-    { "id": "meiao-listrado", "nome": "Meião listrado", "categoria": "vestuario", "precoCentavos": 2990, "estoque": 55 }
+    {
+      "id": "camisa-titular",
+      "nome": "Camisa titular 2026",
+      "categoria": "vestuario",
+      "precoCentavos": 18990,
+      "estoque": 24
+    },
+    {
+      "id": "camisa-reserva",
+      "nome": "Camisa reserva 2026",
+      "categoria": "vestuario",
+      "precoCentavos": 17990,
+      "estoque": 12
+    },
+    {
+      "id": "bone-classico",
+      "nome": "Boné clássico",
+      "categoria": "acessorios",
+      "precoCentavos": 6990,
+      "estoque": 40
+    },
+    {
+      "id": "bola-oficial",
+      "nome": "Bola oficial",
+      "categoria": "esporte",
+      "precoCentavos": 12990,
+      "estoque": 7
+    },
+    {
+      "id": "meiao-listrado",
+      "nome": "Meião listrado",
+      "categoria": "vestuario",
+      "precoCentavos": 2990,
+      "estoque": 55
+    }
   ]
 }
