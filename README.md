@@ -54,6 +54,10 @@ desligada no projeto (loja pública; sem segredo no workflow).
 | #3 | D2: produto removido do JSON | 🔴 bloqueia — item removido + 2 `href` trocados | 63 s |
 | #4 | D3: link do rodapé → `/sobre-nos` | 🔴 bloqueia — `href` em 6 páginas, 1 grupo | 75 s |
 | #5 | D4: checagem de estoque invertida | 🔴 bloqueia — 6 botões "Adicionar" removidos | 62 s |
+| #6 | D5: total do carrinho ignora a quantidade | 🟢 `UNDETERMINED_ONLY` — **passou**: texto de dinheiro que muda é MEDIUM; o problema do oráculo, declarado | 67 s |
 
-Os PRs de defeito ficam abertos como registro; não devem ser mesclados.
+Os PRs de defeito ficam abertos como registro; não devem ser mesclados. O #6 é
+um falso negativo declarado: a jornada com ações chega ao carrinho errado,
+mas um total que muda de `R$ 382,26` para `R$ 271,84` é mudança de texto —
+sem fonte de verdade para o valor (banco, contrato), a tela não decide.
 Leitura completa em `docs/medicao-fase-1.md` §11 do ALETHEIA.
