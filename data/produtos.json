@@ -1,6 +1,6 @@
 {
   "moeda": "BRL",
-  "descontoPercentual": 15,
+  "descontoPercentual": 10,
   "produtos": [
     { "id": "camisa-titular", "nome": "Camisa titular 2026", "categoria": "vestuario", "precoCentavos": 18990, "estoque": 24 },
     { "id": "camisa-reserva", "nome": "Camisa reserva 2026", "categoria": "vestuario", "precoCentavos": 17990, "estoque": 12 },
