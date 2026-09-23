@@ -2,33 +2,166 @@
   "irVersion": "1.0.0",
   "id": "jr_aletheia_demo_acoes",
   "name": "aletheia-demo-acoes",
-  "viewport": { "width": 1280, "height": 800 },
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
   "steps": [
-    { "id": "st_01", "action": "navigate", "path": "/" },
-    { "id": "st_02", "action": "observe", "observationId": "home", "masks": [], "database": [] },
-
-    { "id": "st_03", "action": "navigate", "path": "/catalogo" },
-    { "id": "st_04", "action": "observe", "observationId": "catalogo", "masks": [], "database": [] },
-    { "id": "st_05", "action": "click", "target": { "testId": "adicionar-camisa-titular", "role": "button", "name": "Adicionar ao carrinho" } },
-    { "id": "st_06", "action": "click", "target": { "testId": "adicionar-bola-oficial", "role": "button", "name": "Adicionar ao carrinho" } },
-    { "id": "st_07", "action": "observe", "observationId": "catalogo-apos-adicionar", "masks": [], "database": [] },
-
-    { "id": "st_08", "action": "navigate", "path": "/produto?id=bola-oficial" },
-    { "id": "st_09", "action": "observe", "observationId": "produto", "masks": [], "database": [] },
-    { "id": "st_10", "action": "click", "target": { "testId": "adicionar-bola-oficial", "role": "button", "name": "Adicionar ao carrinho" } },
-
-    { "id": "st_11", "action": "navigate", "path": "/carrinho" },
-    { "id": "st_12", "action": "observe", "observationId": "carrinho", "masks": [], "database": [] },
-
-    { "id": "st_13", "action": "navigate", "path": "/contato" },
-    { "id": "st_14", "action": "fill", "target": { "field": "nome", "placeholder": "Seu nome" }, "value": "Ana Teste" },
-    { "id": "st_15", "action": "fill", "target": { "field": "email", "placeholder": "voce@exemplo.com" }, "value": "ana@exemplo.com" },
-    { "id": "st_16", "action": "select", "target": { "field": "assunto" }, "value": "troca" },
-    { "id": "st_17", "action": "fill", "target": { "field": "mensagem" }, "value": "Quero trocar o meião por outro tamanho." },
-    { "id": "st_18", "action": "click", "target": { "role": "button", "name": "Enviar" } },
-    { "id": "st_19", "action": "observe", "observationId": "contato-enviado", "masks": [], "database": [] },
-
-    { "id": "st_20", "action": "navigate", "path": "/sobre" },
-    { "id": "st_21", "action": "observe", "observationId": "sobre", "masks": [], "database": [] }
+    {
+      "id": "st_01",
+      "action": "navigate",
+      "path": "/"
+    },
+    {
+      "id": "st_02",
+      "action": "observe",
+      "observationId": "home",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_03",
+      "action": "navigate",
+      "path": "/catalogo"
+    },
+    {
+      "id": "st_04",
+      "action": "observe",
+      "observationId": "catalogo",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_05",
+      "action": "click",
+      "target": {
+        "testId": "adicionar-camisa-titular",
+        "role": "button",
+        "name": "Adicionar ao carrinho"
+      }
+    },
+    {
+      "id": "st_06",
+      "action": "click",
+      "target": {
+        "testId": "adicionar-bola-oficial",
+        "role": "button",
+        "name": "Adicionar ao carrinho"
+      }
+    },
+    {
+      "id": "st_07",
+      "action": "observe",
+      "observationId": "catalogo-apos-adicionar",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_08",
+      "action": "navigate",
+      "path": "/produto?id=bola-oficial"
+    },
+    {
+      "id": "st_09",
+      "action": "observe",
+      "observationId": "produto",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_10",
+      "action": "click",
+      "target": {
+        "testId": "adicionar-bola-oficial",
+        "role": "button",
+        "name": "Adicionar ao carrinho"
+      }
+    },
+    {
+      "id": "st_11",
+      "action": "navigate",
+      "path": "/carrinho"
+    },
+    {
+      "id": "st_12",
+      "action": "observe",
+      "observationId": "carrinho",
+      "masks": [],
+      "database": [],
+      "relations": [
+        {
+          "id": "total-e-soma-dos-subtotais",
+          "kind": "SUM_EQUALS",
+          "parts": "data-centavos-subtotal",
+          "total": "data-centavos-total"
+        }
+      ]
+    },
+    {
+      "id": "st_13",
+      "action": "navigate",
+      "path": "/contato"
+    },
+    {
+      "id": "st_14",
+      "action": "fill",
+      "target": {
+        "field": "nome",
+        "placeholder": "Seu nome"
+      },
+      "value": "Ana Teste"
+    },
+    {
+      "id": "st_15",
+      "action": "fill",
+      "target": {
+        "field": "email",
+        "placeholder": "voce@exemplo.com"
+      },
+      "value": "ana@exemplo.com"
+    },
+    {
+      "id": "st_16",
+      "action": "select",
+      "target": {
+        "field": "assunto"
+      },
+      "value": "troca"
+    },
+    {
+      "id": "st_17",
+      "action": "fill",
+      "target": {
+        "field": "mensagem"
+      },
+      "value": "Quero trocar o meião por outro tamanho."
+    },
+    {
+      "id": "st_18",
+      "action": "click",
+      "target": {
+        "role": "button",
+        "name": "Enviar"
+      }
+    },
+    {
+      "id": "st_19",
+      "action": "observe",
+      "observationId": "contato-enviado",
+      "masks": [],
+      "database": []
+    },
+    {
+      "id": "st_20",
+      "action": "navigate",
+      "path": "/sobre"
+    },
+    {
+      "id": "st_21",
+      "action": "observe",
+      "observationId": "sobre",
+      "masks": [],
+      "database": []
+    }
   ]
 }

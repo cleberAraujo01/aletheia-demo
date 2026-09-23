@@ -91,11 +91,11 @@
     const linhas = itens.map((i) => {
       const unit = comDesconto(i.p.precoCentavos, dados.descontoPercentual);
       const sub = unit * i.qtd; total += sub;
-      return "<tr data-item=\"" + i.p.id + "\"><td>" + i.p.nome + '</td><td class="num">' + i.qtd + '</td><td class="num">' + formatar(unit) + '</td><td class="num">' + formatar(sub) + "</td></tr>";
+      return "<tr data-item=\"" + i.p.id + "\"><td>" + i.p.nome + '</td><td class="num">' + i.qtd + '</td><td class="num">' + formatar(unit) + '</td><td class="num" data-centavos-subtotal="' + sub + '">' + formatar(sub) + "</td></tr>";
     }).join("");
     raiz.innerHTML =
       '<table class="tabela"><thead><tr><th>Produto</th><th class="num">Qtd.</th><th class="num">Unitário</th><th class="num">Subtotal</th></tr></thead><tbody>' + linhas +
-      '</tbody><tfoot><tr><th colspan="3">Total</th><th class="num" data-total>' + formatar(total) + "</th></tr></tfoot></table>" +
+      '</tbody><tfoot><tr><th colspan="3">Total</th><th class="num" data-total data-centavos-total="' + total + '">' + formatar(total) + "</th></tr></tfoot></table>" +
       '<p><button class="botao" data-limpar>Esvaziar carrinho</button></p>';
     raiz.querySelector("[data-limpar]").addEventListener("click", () => { gravarCarrinho({}); paginaCarrinho(raiz); });
   }
